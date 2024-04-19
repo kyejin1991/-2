@@ -1,0 +1,43 @@
+### 1. HTML 파일 (index.html)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interactive Invitation</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="invitation">
+    <img src="invitation-closed.jpg" alt="Closed Invitation" id="invitationImage" onclick="openInvitation()">
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+```
+
+### 2. CSS 파일 (styles.css)
+```css
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.invitation img {
+    width: 100%;
+    max-width: 600px;
+    cursor: pointer;
+}
+```
+
+### 3. JavaScript 파일 (script.js)
+```javascript
+function openInvitation() {
+    var invitationImage = document.getElementById('invitationImage');
+    invitationImage.src = 'invitation-open.jpg';  // 클릭 시 보여줄 이미지로 변경
+}
+```
